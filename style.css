@@ -423,6 +423,9 @@ h2 {
     bottom: 180px;
     left: 400px;
   }
+  .contact a h5 span {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -464,5 +467,17 @@ h2 {
 
   .mg-text {
     margin-bottom: 2rem;
+  }
+  .contact {
+    padding-left: unset;
+  }
+
+  .contact a {
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+
+  .contact a h5 span {
+    display: none;
   }
 }
