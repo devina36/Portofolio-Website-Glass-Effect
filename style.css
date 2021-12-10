@@ -235,6 +235,10 @@ section {
   color: #fff;
 }
 
+#div1 h1 {
+  font-size: 4vw;
+}
+
 h1 {
   font-weight: 800;
 }
@@ -260,6 +264,22 @@ h2 {
 }
 
 /* =====END PROJECT==== */
+
+/* =======CONTACT======= */
+.contact {
+  padding-left: 2rem;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact a:hover {
+  color: var(--clr);
+}
+
+/* ========END CONTACT========= */
 
 @media screen and (max-width: 1024px) {
   nav {
@@ -322,6 +342,10 @@ h2 {
     display: none;
   }
 
+  /* h1 {
+    font-size: initial;
+  } */
+
   section {
     all: unset;
     display: flex;
@@ -369,6 +393,10 @@ h2 {
 @media screen and (max-width: 768px) {
   #div1 .col-md-7 {
     text-align: center;
+  }
+
+  #div1 h1 {
+    font-size: x-large;
   }
 
   .circle1 {

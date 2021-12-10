@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     /> -->
-
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
     <title>Document</title>
   </head>
   <body>
@@ -74,7 +74,7 @@
             <h1>I'm Devina,</h1>
             <h1>Web Developer.</h1>
             <p>Frond End Developer</p>
-            <button class="btn">About Me</button>
+            <a href="#" class="btn">About Me</a>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
             <button class="btn"><ion-icon style="font-size: 20px;" name="download"></ion-icon> My CV</ion-icon></button>
           </div>
           <div class="col-md-6 text-center">
-            <img src="img/me.png" width="250" alt="" />
+            <img src="img/Illustration 1.png" style="width: 100%;" width="250" alt="" />
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@
     <section id="div3" class="sec" style="display: none">
       <div class="container">
         <div class="row justify-content-center text-white">
-            <h1 class="mg">My Project</h1>
+            <h1 class="mg text-center">My Project</h1>
             <div class="col-md-6 mg-text">
               <h2>1.</h2>
               <h2>Responsive Landing Page Christmas</h2>
@@ -136,6 +136,77 @@
       </div>
     </section>
 
+    <section id="div4" class="sec" style="display: none">
+      <div class="container">
+        <div class="row justify-content-center text-white">
+          <div class="col-md-6">
+            <h1 class="mb-5">Contact Me</h1>
+            <form name="contact-form">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="form-control mb-3"
+                  id="name"
+                  aria-describedby="name"
+                  name="nama"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-control mb-3"
+                  id="email"
+                  aria-describedby="email"
+                  name="email"
+                />
+                <textarea
+                  class="form-control mb-4"
+                  placeholder="Your Massage"
+                  id="pesan"
+                  rows="3"
+                  name="pesan"
+                ></textarea>
+              <button type="submit" class="btn btn-kirim">
+                Send <ion-icon class="ico" name="send-outline"></ion-icon>
+              </button>
+              <button class="btn btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="contact">
+            <a href="https://github.com/devina36">
+              <h4>
+                <ion-icon style="font-size: 35px;" name="logo-github"></ion-icon>
+                <span>devina36</span>
+              </h4>
+            </a>
+            <a href="https://www.instagram.com/dvnaa.lia36/">
+              <h4>
+                <ion-icon style="font-size: 35px;" name="logo-instagram"></ion-icon>
+                <span>@dvnaa.lia36</span>
+              </h4>
+            </a>
+            <a href="">
+              <h4>
+                <ion-icon style="font-size: 35px;" name="mail-open-outline"></ion-icon>
+                <span>ddev7693@gmail.com</span>
+              </h4>
+            </a>
+            <a href="https://www.linkedin.com/in/devina-amalia-arindi/">
+              <h4>
+                <ion-icon style="font-size: 35px;" name="logo-linkedin"></ion-icon>
+                <span>Devina Amalia Arindi</span>
+              </h4>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -144,22 +215,35 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- <script>
-      const list = document.querySelectorAll('.list');
-      const section = document.querySelectorAll('.sec');
-      function activeLink() {
-        list.forEach((item) => item.classList.remove('active'));
-        this.classList.add('active');
-      }
-      list.forEach((item) => item.addEventListener('click', activeLink));
-    </script> -->
-
+    <script src="js/sweetalert2.min.js"></script>
     <script>
       $('.list').click(function () {
         $('.sec').hide();
         $('.list').removeClass('active');
         $(this).addClass('active');
         $('#div' + $(this).attr('target')).show();
+      });
+    </script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbxJoE5PbULd8oNHVmFgE8OptXgf3zqfDeT8er6HMhS2whDC1_pA7TVyxIQNKDzaoyNZcg/exec';
+      const form = document.forms['contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            Swal.fire('Thank You!', 'Your massage has been sent!', 'success');
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
       });
     </script>
   </body>
