@@ -407,7 +407,8 @@ h2 {
   .row {
     margin-left: 1px;
     margin-right: 1px;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
+    padding: 2rem 1rem;
   }
 
   .me {
@@ -476,6 +477,10 @@ h2 {
   .contact a h5 span {
     font-size: 1rem;
   }
+
+  #div3 .container {
+    margin: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -507,9 +512,9 @@ h2 {
     all: unset;
   }
 
-  #div3 .container {
+  /* #div3 .container {
     margin: unset;
-  }
+  } */
 
   .mg {
     margin-bottom: 4rem;
