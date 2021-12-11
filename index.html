@@ -253,6 +253,12 @@
       $('input').blur(function(){
         $('nav').show();
       });
+      $('textarea').focus(function(){
+        $('nav').hide();
+      });
+      $('textarea').blur(function(){
+        $('nav').show();
+      });
     </script>
   </body>
 </html>
