@@ -9,6 +9,16 @@
 
 :root {
   --clr: #222327;
+  --accent: #9349eb;
+  --circle1: linear-gradient(to right bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  --circle_sh1: #f78ca099;
+  --circle2: linear-gradient(to right bottom, #c165dd, #5c27fe);
+  --circle_sh2: #c165dd99;
+  --circle3: linear-gradient(to left bottom, #d4fc79, #96e6a1);
+  --circle_sh3: #d4fc79;
+  /* --circle1: yellowgreen;
+  --circle2: salmon;
+  --circle3: #6670cd; */
 }
 
 body {
@@ -23,7 +33,7 @@ nav {
   width: 70px;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: rgb(228, 202, 255);
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -88,7 +98,7 @@ nav {
   left: 50%;
   width: 70px;
   height: 70px;
-  background-color: #9acd32;
+  background: var(--circle2);
   border-radius: 50%;
   border: 6px solid var(--clr);
   transition: 0.5s;
@@ -138,24 +148,24 @@ nav {
 
 /* ========= CIRCLE ============ */
 
-.bg-circle {
+.circle {
   position: fixed;
   border-radius: 50%;
 }
 
-.salmon {
-  background-color: #fa8072;
-  box-shadow: 0 0 50px #fa807299;
-}
-
-.yellow {
-  background-color: #9acd32;
-  box-shadow: 0 0 50px #9acd3299;
+.red {
+  background: var(--circle1);
+  box-shadow: 0 0 20px var(--circle_sh1);
 }
 
 .blue {
-  background-color: #6670cd;
-  box-shadow: 0 0 50px #6670cd99;
+  background: var(--circle2);
+  box-shadow: 0 0 50px var(--circle_sh2);
+}
+
+.green {
+  background: var(--circle3);
+  box-shadow: 0 0 20px var(--circle_sh3);
 }
 
 .circle1 {
@@ -253,11 +263,13 @@ section {
 
 .row {
   background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.4);
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 5rem 2rem;
 }
@@ -277,12 +289,32 @@ section {
 .btn {
   border: 2px solid #fff;
   color: #fff;
+  position: relative;
 }
 
 .btn:hover {
   border: 2px solid var(--clr);
   color: var(--clr);
-  background-color: #fff;
+  /* background-color: #fff; */
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--circle1);
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
 }
 
 #div1 h1 {
@@ -368,7 +400,7 @@ h2 {
 
   .navigation ul li.active a .icon {
     transform: translateY(-10px);
-    color: yellowgreen;
+    color: var(--accent);
   }
 
   .navigation ul li a .text {
@@ -386,7 +418,8 @@ h2 {
   .navigation ul li.active a .text {
     opacity: 1;
     transform: translateY(10px);
-    color: yellowgreen;
+    color: var(--accent);
+    /* -webkit-text-fill-color: transparent; */
   }
 
   .indicator {
@@ -480,7 +513,7 @@ h2 {
   }
 
   #div3 .container {
-    margin: 1rem 0;
+    margin: 0.3rem 0;
   }
 }
 
