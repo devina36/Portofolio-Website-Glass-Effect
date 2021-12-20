@@ -262,9 +262,9 @@ section {
 }
 
 .row {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(228, 202, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(228, 202, 255, 0.4);
   min-height: 90vh;
   justify-content: center;
   align-items: center;
@@ -280,8 +280,8 @@ section {
 
 .me {
   background-color: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px var(--circle_sh1);
   border-radius: 50%;
   width: 70%;
 }
@@ -372,6 +372,8 @@ h2 {
     height: 70px;
     width: 100%;
     display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 
   .navigation {
@@ -384,12 +386,12 @@ h2 {
 
   .navigation ul {
     height: auto;
-    width: 280px;
+    width: 50%;
     flex-direction: row;
   }
 
   .navigation ul li {
-    width: 70px;
+    width: 25%;
     height: 70px;
   }
 
@@ -480,6 +482,10 @@ h2 {
     text-align: center;
   }
 
+  .me {
+    width: 228px;
+  }
+
   #div1 h1 {
     font-size: x-large;
   }
@@ -508,19 +514,40 @@ h2 {
     bottom: 180px;
     left: 400px;
   }
-  .contact a h5 span {
-    font-size: 1rem;
-  }
 
   #div3 .container {
     margin: 0.3rem 0;
   }
+
+  .mg {
+    margin-bottom: 4rem;
+  }
+
+  .mg-text {
+    margin-bottom: 2rem;
+  }
+
+  .contact a h5 span {
+    font-size: 1rem;
+  }
+
+  .contact {
+    padding-left: unset;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  .me {
-    width: 80%;
+  .navigation ul {
+    width: 280px;
   }
+
+  .navigation ul li {
+    width: 70px;
+  }
+
+  /* .me {
+    width: 80%;
+  } */
 
   .circle1 {
     right: 5px;
@@ -550,17 +577,6 @@ h2 {
     margin: unset;
   } */
 
-  .mg {
-    margin-bottom: 4rem;
-  }
-
-  .mg-text {
-    margin-bottom: 2rem;
-  }
-  .contact {
-    padding-left: unset;
-  }
-
   .contact a {
     display: inline-block;
     padding-right: 0.5rem;
@@ -568,5 +584,19 @@ h2 {
 
   .contact a h5 span {
     display: none;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .me {
+    width: 80%;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .navigation ul li a .icon {
+    font-size: 1.5rem;
   }
 }
