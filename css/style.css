@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   box-sizing: border-box;
 }
 
@@ -16,13 +16,17 @@
   --circle_sh2: #c165dd99;
   --circle3: linear-gradient(to left bottom, #d4fc79, #96e6a1);
   --circle_sh3: #d4fc79;
-  /* --circle1: yellowgreen;
-  --circle2: salmon;
-  --circle3: #6670cd; */
 }
 
 body {
   background-color: var(--clr);
+  color: #fff;
+}
+
+.cd {
+  background: var(--circle2);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ======NAVBAR========= */
@@ -279,7 +283,7 @@ section {
 /* ==========HOME=============== */
 
 .me {
-  background-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2px);
   box-shadow: 0 0 20px var(--circle_sh1);
   border-radius: 50%;
@@ -295,7 +299,6 @@ section {
 .btn:hover {
   border: 2px solid var(--clr);
   color: var(--clr);
-  /* background-color: #fff; */
 }
 
 .btn::before {
@@ -318,7 +321,7 @@ section {
 }
 
 #div1 h1 {
-  font-size: 4vw;
+  font-size: calc(14px + 3vw);
 }
 
 h1 {
@@ -327,12 +330,12 @@ h1 {
 /* ======END HOME======= */
 
 /* ======PROJECT====== */
-h2 {
+/* h2 {
   font-weight: 700;
-}
+} */
 
 #div3 .container {
-  margin: 1.2rem 0;
+  margin: 2.2rem 0;
 }
 
 #div3 img {
@@ -486,9 +489,9 @@ h2 {
     width: 228px;
   }
 
-  #div1 h1 {
+  /* #div1 h1 {
     font-size: x-large;
-  }
+  } */
 
   .circle1 {
     right: 30px;
@@ -585,12 +588,6 @@ h2 {
   .contact a h5 span {
     display: none;
   }
-}
-
-@media screen and (max-width: 370px) {
-  .me {
-    width: 80%;
-  }
 
   nav {
     height: 60px;
@@ -598,5 +595,23 @@ h2 {
 
   .navigation ul li a .icon {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .me {
+    width: 75%;
+  }
+
+  #div1 h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  .navigation ul li a .icon {
+    font-size: 1.3rem;
   }
 }

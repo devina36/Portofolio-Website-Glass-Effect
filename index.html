@@ -14,13 +14,7 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    /> -->
+    
     <link rel="stylesheet" href="css/sweetalert2.min.css" />
     <title>My Portofolio | Devina </title>
   </head>
@@ -36,13 +30,13 @@
         <ul id="ul">
           <li class="list list1 active" target="1">
             <a href="#home">
-              <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="icon"><ion-icon  class="ico" name="home-outline"></ion-icon></span>
               <span class="text">Home</span>
             </a>
           </li>
           <li class="list list2" target="2">
             <a href="#about">
-              <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+              <span class="icon"><ion-icon  class="ico" name="person-outline"></ion-icon></span>
               <span class="text">About</span>
             </a>
           </li>
@@ -65,15 +59,15 @@
 
     <section id="div1" class="sec">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="row1">
           <div class="col-md-5 text-center">
             <img class="me" src="img/me.png" alt="" />
           </div>
-          <div class="col-md-7 order-md-first text-white">
+          <div class="col-md-7 order-md-first">
             <h1>Hi,</h1>
-            <h1>I'm Devina,</h1>
-            <h1>Web Developer.</h1>
-            <p>Frond End Developer</p>
+            <h1>I'm <span class="cd">Devina,</span></h1>
+            <h1>Fresh Graduate.</h1>
+            <p>Bachelor of Technology</p>
             <!-- <a href="#" class="btn">About Me</a> -->
           </div>
         </div>
@@ -82,9 +76,9 @@
 
     <section id="div2" class="sec" style="display: none">
       <div class="container">
-        <div class="row justify-content-center text-white">
+        <div class="row justify-content-center" id="row2" >
           <div class="col-md-6">
-            <h1>About</h1>
+            <h1 class="mb-4">About Me</h1>
             <p>
               My name is Devina Amalia Arindi, I am a fresh graduate from the State University of Malang with
               a Bachelor of Technology and knowledge in web design and development. I'm from Kediri, Indonesia. Well
@@ -93,7 +87,7 @@
             <a  href="https://drive.google.com/file/d/1Becrww-LA2-uQgPsgvsQ-DDSFCBJNBCK/view?usp=sharing" class="btn"><ion-icon style="font-size: 20px;" name="download"></ion-icon> My CV</ion-icon></a>
           </div>
           <div class="col-md-6 text-center">
-            <img src="img/Illustration 1.png" style="width: 100%;" width="250" alt="" />
+            <img src="img/Illustration 1.png" style="width: 90%;" width="250" alt="" />
           </div>
         </div>
       </div>
@@ -101,7 +95,7 @@
 
     <section id="div3" class="sec" style="display: none">
       <div class="container">
-        <div class="row justify-content-center text-white">
+        <div class="row justify-content-center">
             <h1 class="mg text-center">My Projects</h1>
             <div class="col-md-6 mg-text">
               <h2>1.</h2>
@@ -138,7 +132,7 @@
 
     <section id="div4" class="sec" style="display: none">
       <div class="container">
-        <div class="row justify-content-center text-white">
+        <div class="row justify-content-center">
           <div class="col-md-6">
             <h1 class="mb-5">Contact Me</h1>
             <form name="contact-form">
@@ -219,6 +213,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script>
       $('.list').click(function () {
         $('.sec').hide();
