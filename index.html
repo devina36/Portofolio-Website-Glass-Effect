@@ -26,7 +26,7 @@
     <div class="green circle5 circle"></div>
 
     <nav>
-      <div class="navigation">
+     <div class="navigation">
         <ul id="ul">
           <li class="list list1 active" target="1">
             <a href="#home">
@@ -59,7 +59,7 @@
 
     <section id="div1" class="sec">
       <div class="container">
-        <div class="row justify-content-center" id="row1">
+        <div class="row justify-content-center">
           <div class="col-md-5 text-center">
             <img class="me" src="img/me.png" alt="" />
           </div>
@@ -76,7 +76,7 @@
 
     <section id="div2" class="sec" style="display: none">
       <div class="container">
-        <div class="row justify-content-center" id="row2" >
+        <div class="row justify-content-center">
           <div class="col-md-6">
             <h1 class="mb-4">About Me</h1>
             <p>
@@ -139,7 +139,7 @@
                 <input
                   type="text"
                   placeholder="Your Name"
-                  class="form-control mb-3"
+                  class="form-control form-bg mb-3"
                   id="name"
                   aria-describedby="name"
                   name="nama"
@@ -148,14 +148,14 @@
                 <input
                   type="email"
                   placeholder="Your Email"
-                  class="form-control mb-3"
+                  class="form-control form-bg mb-3"
                   id="email"
                   aria-describedby="email"
                   name="email"
                   required
                 />
                 <textarea
-                  class="form-control mb-4"
+                  class="form-control form-bg mb-4"
                   placeholder="Your Massage"
                   id="pesan"
                   rows="3"
@@ -220,7 +220,9 @@
         $('.list').removeClass('active');
         $(this).addClass('active');
         $('#div' + $(this).attr('target')).show();
+        gsap.from('#div' + $(this).attr('target'), {opacity: 0, duration: 2});
       });
+      gsap.from('#div1', {opacity: 0, duration: 2});
     </script>
     <script>
       const scriptURL =
@@ -245,18 +247,23 @@
       });
     </script>
     <!-- <script>
-      $('input').focus(function(){
-        $('nav').hide();
-      });
-      $('input').blur(function(){
-        $('nav').show();
-      });
-      $('textarea').focus(function(){
-        $('nav').hide();
-      });
-      $('textarea').blur(function(){
-        $('nav').show();
-      });
+      var x = window.matchMedia("(max-width:1024px)");
+      if (x.matches){
+        $('input').focus(function(){
+          $('nav').hide();
+          $('.row').css("margin-bottom", "unset");
+        });
+        $('input').blur(function(){
+          $('nav').show();
+          $('.row').css("margin-bottom", "60px");
+        });
+        $('textarea').focus(function(){
+          $('nav').hide();
+        });
+        $('textarea').blur(function(){
+          $('nav').show();
+        });
+      }
     </script> -->
   </body>
 </html>
