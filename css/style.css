@@ -297,6 +297,7 @@ section {
   background: var(--bg2);
   color: #fff;
   position: relative;
+  width: fit-content;
 }
 
 .btn:hover {
@@ -338,20 +339,29 @@ h2 {
   font-weight: 700;
 }
 
-#div3 .container {
-  margin: 2.2rem 0;
+#div3 .row {
+  padding: 2rem;
+}
+
+#div3 .owl-carousel .container .row {
+  background: unset;
+  min-height: initial;
+  padding: 1rem 1rem;
+  border: 1px solid #fff;
+  color: #fff;
+  box-shadow: 0 0 10px var(--circle_sh2);
 }
 
 #div3 img {
   border-radius: 20px;
 }
 
-.mg-text {
+/* .mg-text {
   margin-bottom: 7rem;
 }
 .mg {
   margin-bottom: 7rem;
-}
+} */
 
 /* =====END PROJECT==== */
 
@@ -384,6 +394,25 @@ input[type='email']:focus {
 
 .form-control::placeholder {
   color: #d3d2d2;
+}
+
+.owl-carousel .owl-nav button {
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  left: 0;
 }
 
 /* ========END CONTACT========= */
@@ -494,6 +523,18 @@ input[type='email']:focus {
     bottom: 180px;
     left: 400px;
   }
+
+  #div3 .owl-carousel .container {
+    padding: unset;
+  }
+
+  .mg {
+    margin-bottom: 3rem;
+  }
+
+  .mg-text {
+    margin-bottom: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -534,17 +575,9 @@ input[type='email']:focus {
     left: 400px;
   }
 
-  #div3 .container {
+  /* #div3 .container {
     margin: 0.3rem 0;
-  }
-
-  .mg {
-    margin-bottom: 4rem;
-  }
-
-  .mg-text {
-    margin-bottom: 4rem;
-  }
+  } */
 
   .contact a h5 span {
     font-size: 1rem;
@@ -615,6 +648,10 @@ input[type='email']:focus {
 
   .navigation ul li a .icon {
     font-size: 1.5rem;
+  }
+
+  #div3 .owl-carousel .container .row {
+    padding: 1rem 0.5rem;
   }
 }
 

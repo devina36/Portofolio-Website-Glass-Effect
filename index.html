@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
     
     <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <title>My Portofolio | Devina </title>
   </head>
   <body>
@@ -84,7 +85,10 @@
               a Bachelor of Technology and knowledge in web design and development. I'm from Kediri, Indonesia. Well
               organised person, problem solver, independent with high intention of detail
             </p>
-            <a  href="https://drive.google.com/file/d/1Becrww-LA2-uQgPsgvsQ-DDSFCBJNBCK/view?usp=sharing" class="btn"><ion-icon style="font-size: 20px;" name="download"></ion-icon> My CV</ion-icon></a>
+            <a  href="https://drive.google.com/file/d/1joAv8U2P5726l-6ZMdwFk3-cPumZ1Tnc/view?usp=sharing" class="btn d-flex align-items-center justify-content-center">
+              <ion-icon style="font-size: 20px;" name="download"></ion-icon></ion-icon>
+              <span>&nbsp; My CV</span>
+            </a>
           </div>
           <div class="col-md-6 text-center">
             <img src="img/Illustration 1.png" style="width: 90%;" width="250" alt="" />
@@ -95,12 +99,57 @@
 
     <section id="div3" class="sec" style="display: none">
       <div class="container">
-        <div class="row justify-content-center">
-            <h1 class="mg text-center">My Projects</h1>
-            <div class="col-md-6 mg-text">
+        <div class="row justify-content-center align-items-center">
+            <h1 class="text-center">My Projects</h1>
+              <div class="owl-carousel owl-theme pt-3">
+                <div class="item">
+                  <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                      <div class="col-lg-6 mg">
+                        <img src="img/christmas.jpg" class="img-fluid" width="auto" alt="christmas" />
+                      </div>
+                      <div class="col-lg-6 mg-text">
+                        <h2>1.</h2>
+                        <h2>Responsive Landing Page Christmas</h2>
+                        <p>Design By Bendimcode</p>
+                        <a href="https://devina36.github.io/christmas" class="btn">Visit</a>
+                        <a href="https://github.com/devina36/christmas" class="btn">Source Code</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="container">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6 mg">
+                      <img src="img/Blog.jpg" class="img-fluid" width="auto" alt="blog" />
+                    </div>
+                    <div class="col-lg-6 mg-text">
+                      <h2>2.</h2>
+                      <h2>Simple Blog using framework Laravel with Authorization</h2>
+                      <a href="https://github.com/devina36/Blog_Laravel" class="btn">Source Code</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="item">
+                <div class="container">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-6 mg">
+                      <img src="img/simpi.jpg" class="img-fluid" width="auto" alt="simpi" />
+                    </div>
+                    <div class="col-lg-6 mg-text">
+                      <h2>3.</h2>
+                      <h2>SIMPI Teknik Elektro UM</h2>
+                      <a href="http://elektro.um.ac.id/simpi/homepage" class="btn">Visit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-6 mg-text">
               <h2>1.</h2>
               <h2>Responsive Landing Page Christmas</h2>
-              <p>Membuat Landing Page Responsive dengan design christmas dengan 2 mode dark dan light menggunakan html, css, bootsraps, dan javascript.</p>
               <p>Design By Bendimcode</p>
               <a href="https://devina36.github.io/christmas" class="btn">Visit</a>
               <a href="https://github.com/devina36/christmas" class="btn">Source Code</a>
@@ -110,8 +159,7 @@
             </div>
             <div class="col-md-6 mg-text">
               <h2>2.</h2>
-              <h2>Blog Sederhana Menggunakan Laravel Dengan Authorization</h2>
-              <p>Membangun blog sederhana dengan CRUD dan roles user didalamnya, menggunakan framework laravel dan bootstrap  </p>
+              <h2>Simple Blog using framework Laravel with Authorization</h2>
               <a href="https://github.com/devina36/Blog_Laravel" class="btn">Source Code</a>
             </div>
             <div class="col-md-6 mg">
@@ -120,12 +168,11 @@
             <div class="col-md-6 mg-text">
               <h2>3.</h2>
               <h2>SIMPI Teknik Elektro UM</h2>
-              <p>Berkontribusi dalam pengembangan Sistem Informasi Praktik Industri Teknik Elektro UM. Seperti halnya membuat menu input nilai mahasiswa dan dosen.</p>
               <a href="http://elektro.um.ac.id/simpi/homepage" class="btn">Visit</a>
             </div>
             <div class="col-md-6">
               <img src="img/simpi.jpg" class="img-fluid" width="auto" alt="" />
-            </div>
+            </div> -->
         </div>
       </div>
     </section>
@@ -162,8 +209,9 @@
                   name="pesan"
                   required
                 ></textarea>
-              <button type="submit" class="btn btn-kirim">
-                Send <ion-icon class="ico" name="send-outline"></ion-icon>
+              <button type="submit" class="btn btn-kirim d-flex justify-content-center align-items-center">
+               <span>Send&nbsp;</span> 
+               <ion-icon class="ico" name="send-outline"></ion-icon>
               </button>
               <button class="btn btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -209,9 +257,10 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/sweetalert2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
     <script>
@@ -245,6 +294,26 @@
           })
           .catch((error) => console.error('Error!', error.message));
       });
+    </script>
+    <script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:50,
+        autoplay:true,
+        autoplayHoverPause:true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    })
     </script>
     <!-- <script>
       var x = window.matchMedia("(max-width:1024px)");
